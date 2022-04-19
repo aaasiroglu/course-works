@@ -1,0 +1,229 @@
+<html lang="en">
+
+<head>
+    <title> asiroglu19 Term Project</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <style>
+        div {
+            border: 1px solid rgb(14, 192, 183);
+            background-color: rgb(0, 0, 0);
+            color: rgb(21, 140, 187)et;
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-align: center;
+        }
+
+        p {
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 20px;
+            align-items: center;
+            color: rgb(144, 44, 226);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 50px;
+            align-items: center;
+            color: rgb(144, 44, 226);
+            text-align: center;
+        }
+
+        #matrisler {
+            padding: 20px;
+        }
+
+        #matrisler input {
+            background-color: rgb(14, 192, 183);
+            width: 50px;
+            font-size: 20px;
+            padding: 5px;
+            margin: 5px;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-weight: 400;
+        }
+
+        .matrix {
+            padding: 20px;
+            margin: 10px 0px;
+        }
+
+        #main button {
+            background-color: rgb(144, 44, 226);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px 5px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+        }
+
+        #result input {
+            background-color: rgb(144, 44, 226);
+            color: rgb(255, 255, 255);
+
+        }
+
+        #main button:hover {
+            background-color:lime;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            appearance: textfield;
+        }
+        .names{
+            color: white;
+            font-size: 15px;
+            font-family: "Lucida Console", "Courier New", monospace;
+            margin: 1px ;
+        }
+        .detail{
+            text-align: center;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <p class="detail"> -TERM WORK- </p>
+    <h1> The Matrix Calculater</h1>
+    <p>Addition, Subtraction and Multiplication</p>
+    <div id="main">
+
+
+
+        <div id="matrisler">
+            <div class="matrix">
+                <p class="names"> Matrix 1 </p>
+                <input type="number" id="1_11">
+                <input type="number" id="1_12">
+                <input type="number" id="1_13"> <br>
+                <input type="number" id="1_21">
+                <input type="number" id="1_22">
+                <input type="number" id="1_23"> <br>
+                <input type="number" id="1_31">
+                <input type="number" id="1_32">
+                <input type="number" id="1_33">
+                
+            </div>
+            
+            <div class="matrix">
+                <p class="names"> Matrix 2 </p>
+                <input type="number" id="2_11">
+                <input type="number" id="2_12">
+                <input type="number" id="2_13"><br>
+                <input type="number" id="2_21">
+                <input type="number" id="2_22">
+                <input type="number" id="2_23"><br>
+                <input type="number" id="2_31">
+                <input type="number" id="2_32">
+                <input type="number" id="2_33">
+                
+            </div>
+            <button onclick="hesapla('sum')">+</button>
+            <button onclick="hesapla('sub')">-</button>
+            <button onclick="hesapla('mul')">x</button>
+            <div class="matrix" id="result">
+                <p class="names"> Result Matrix </p>
+                <input disabled type="number" id="r_11">
+                <input disabled type="number" id="r_12">
+                <input disabled type="number" id="r_13"> <br>
+                <input disabled type="number" id="r_21">
+                <input disabled type="number" id="r_22">
+                <input disabled type="number" id="r_23"> <br>
+                <input disabled type="number" id="r_31">
+                <input disabled type="number" id="r_32">
+                <input disabled type="number" id="r_33">
+                
+            </div>
+        </div>
+    </div>   
+    <p class="detail">
+            <b>Abdurrahim Asiroglu</b> <br>
+            Student Number:010190553 <br>
+            Course Code:GEO101E <br>
+            CRN:13097 <br>
+            Term Project <br>
+            2020-2021 Fall Term <br>
+            <b>Istanbul Technical University <br>
+            Departmant of Geomatics Engineering</b> <br>
+            asiroglu19@itu.edu.tr
+        </p>
+        <script>
+            function hesapla(islem) {
+                var matris1 = [];
+                matris1[11] = parseInt(document.getElementById("1_11").value);
+                matris1[12] = parseInt(document.getElementById("1_12").value);
+                matris1[13] = parseInt(document.getElementById("1_13").value);
+                matris1[21] = parseInt(document.getElementById("1_21").value);
+                matris1[22] = parseInt(document.getElementById("1_22").value);
+                matris1[23] = parseInt(document.getElementById("1_23").value);
+                matris1[31] = parseInt(document.getElementById("1_31").value);
+                matris1[32] = parseInt(document.getElementById("1_32").value);
+                matris1[33] = parseInt(document.getElementById("1_33").value);
+                var matris2 = [];
+                matris2[11] = parseInt(document.getElementById("2_11").value);
+                matris2[12] = parseInt(document.getElementById("2_12").value);
+                matris2[13] = parseInt(document.getElementById("2_13").value);
+                matris2[21] = parseInt(document.getElementById("2_21").value);
+                matris2[22] = parseInt(document.getElementById("2_22").value);
+                matris2[23] = parseInt(document.getElementById("2_23").value);
+                matris2[31] = parseInt(document.getElementById("2_31").value);
+                matris2[32] = parseInt(document.getElementById("2_32").value);
+                matris2[33] = parseInt(document.getElementById("2_33").value);
+                var result = [];
+                if (islem == "sum") {
+                    result[11] = matris1[11] + matris2[11];
+                    result[12] = matris1[12] + matris2[12];
+                    result[13] = matris1[13] + matris2[13];
+                    result[21] = matris1[21] + matris2[21];
+                    result[22] = matris1[22] + matris2[22];
+                    result[23] = matris1[23] + matris2[23];
+                    result[31] = matris1[31] + matris2[31];
+                    result[32] = matris1[32] + matris2[32];
+                    result[33] = matris1[33] + matris2[33];
+                } else if (islem == "sub") {
+                    result[11] = matris1[11] - matris2[11];
+                    result[12] = matris1[12] - matris2[12];
+                    result[13] = matris1[13] - matris2[13];
+                    result[21] = matris1[21] - matris2[21];
+                    result[22] = matris1[22] - matris2[22];
+                    result[23] = matris1[23] - matris2[23];
+                    result[31] = matris1[31] - matris2[31];
+                    result[32] = matris1[32] - matris2[32];
+                    result[33] = matris1[33] - matris2[33];
+                } else if (islem == "mul") {
+                    result[11] = matris1[11]*matris2[11] + matris1[12]*matris2[21]+matris1[13]*matris2[31] ;
+                    result[12] = matris1[11]*matris2[12] + matris1[12]*matris2[22]+matris1[13]*matris2[32] ;
+                    result[13] = matris1[11]*matris2[13] + matris1[12]*matris2[23]+matris1[13]*matris2[33] ;
+                    result[21] = matris1[21]*matris2[11] + matris1[22]*matris2[21]+matris1[23]*matris2[31] ;
+                    result[22] = matris1[21]*matris2[12] + matris1[22]*matris2[22]+matris1[23]*matris2[32] ;
+                    result[23] = matris1[21]*matris2[13] + matris1[22]*matris2[23]+matris1[23]*matris2[33] ;
+                    result[31] = matris1[31]*matris2[11] + matris1[12]*matris2[21]+matris1[13]*matris2[31] ;
+                    result[32] = matris1[31]*matris2[12] + matris1[12]*matris2[22]+matris1[13]*matris2[32] ;
+                    result[33] = matris1[31]*matris2[13] + matris1[12]*matris2[23]+matris1[13]*matris2[33] ;
+                }
+
+
+                document.getElementById("r_11").value = result[11];
+                document.getElementById("r_12").value = result[12];
+                document.getElementById("r_13").value = result[13];
+                document.getElementById("r_21").value = result[21];
+                document.getElementById("r_22").value = result[22];
+                document.getElementById("r_23").value = result[23];
+                document.getElementById("r_31").value = result[31];
+                document.getElementById("r_32").value = result[32];
+                document.getElementById("r_33").value = result[33];
+            }
+        </script>
+
+</body>
+
+</html>
