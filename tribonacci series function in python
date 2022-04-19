@@ -1,0 +1,10 @@
+def tribo(n_553):
+    if n_553==2:
+        return 1
+    elif n_553==1:
+        return 1
+    elif n_553==0:
+        return 0
+    else:
+        return tribo(n_553-1) + tribo(n_553-2) + tribo(n_553-3)
+
